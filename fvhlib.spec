@@ -6,6 +6,7 @@ Release:	1
 License:	distributable
 Group:		Libraries
 Source0:	http://www.vanheusden.com/fvhlib/%{name}-%{version}.tgz
+# Source0-md5:	f4652805d1e263f84bf44d3b81ae9b58
 Patch0:		%{name}-linking.patch
 URL:		http://www.vanheusden.com/fvhlib/
 BuildRequires:	openssl-devel >= 0.9.7
