@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://www.vanheusden.com/fvhlib/%{name}-%{version}.tgz
 Patch0:		%{name}-linking.patch
 URL:		http://www.vanheusden.com/fvhlib/
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
