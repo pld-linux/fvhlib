@@ -15,7 +15,7 @@ diff -urN aaa/fvhlib-2.4/Makefile fvhlib-2.4/Makefile
  lib: $(OBJS)
  	ar -r libfvh.a $(OBJS)
 -	ld -x -shared -soname libfvh.so.2 -o libfvh.so.$(VERSION) --whole-archive libfvh.a
-+	ld -x -shared -soname libfvh.so.2 $(LDFLAGS) -o libfvh.so.$(VERSION) --whole-archive $(OBJS)
++	$(CC) -shared -Wl,-soname=libfvh.so.2 $(LDFLAGS) -o libfvh.so.$(VERSION) $(OBJS)
  
  install: all
  	cp libfvh.* /usr/local/lib
