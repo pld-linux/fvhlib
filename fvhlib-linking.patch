@@ -1,13 +1,12 @@
-diff -urN aaa/fvhlib-2.4/Makefile fvhlib-2.4/Makefile
---- aaa/fvhlib-2.4/Makefile	Fri Feb  7 21:40:16 2003
-+++ fvhlib-2.4/Makefile	Sat Feb  8 20:24:08 2003
+--- fvhlib-2.5/Makefile.orig	Fri Feb 21 21:15:22 2003
++++ fvhlib-2.5/Makefile	Wed May 28 17:15:21 2003
 @@ -19,7 +19,7 @@
  CC=gcc
  
  CFLAGS=-fPIC -Wshadow -Wwrite-strings -Wconversion
 -LDFLAGS=-L/usr/local/contrib/lib -L/usr/local/lib -lm
 +LDFLAGS=-L/usr/local/contrib/lib -L/usr/local/lib -lm -lssl
- VERSION=2.4
+ VERSION=2.5
  
  OBJS=io.o proc.o ssl.o str.o utils.o val.o tcp.o snd_dev.o snd_util.o ip.o mail.o mem.o main.o
 @@ -28,7 +28,7 @@
