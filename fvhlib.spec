@@ -9,7 +9,7 @@ Source0:	http://www.vanheusden.com/fvhlib/%{name}-%{version}.tgz
 # Source0-md5:	130d71aef497e9f890f2a67f882acef9
 Patch0:		%{name}-linking.patch
 URL:		http://www.vanheusden.com/fvhlib/
-BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
