@@ -1,12 +1,12 @@
 Summary:	The fvhlib Library
 Summary(pl):	Biblioteka fvhlib
 Name:		fvhlib
-Version:	2.4
+Version:	2.5
 Release:	1
 License:	distributable
 Group:		Libraries
 Source0:	http://www.vanheusden.com/fvhlib/%{name}-%{version}.tgz
-# Source0-md5:	f4652805d1e263f84bf44d3b81ae9b58
+# Source0-md5:	130d71aef497e9f890f2a67f882acef9
 Patch0:		%{name}-linking.patch
 URL:		http://www.vanheusden.com/fvhlib/
 BuildRequires:	openssl-devel >= 0.9.7
@@ -57,11 +57,11 @@ Biblioteka statyczna fvhlib.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}/%{name}}
 
-install libfvh.so.2.4 $RPM_BUILD_ROOT%{_libdir}
+install libfvh.so.%{version} $RPM_BUILD_ROOT%{_libdir}
 install libfvh.a $RPM_BUILD_ROOT%{_libdir}
 install *.h $RPM_BUILD_ROOT%{_includedir}/%{name}
 
-ln -sf libfvh.so.2.4 $RPM_BUILD_ROOT%{_libdir}/libfvh.so
+ln -sf libfvh.so.%{version} $RPM_BUILD_ROOT%{_libdir}/libfvh.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
