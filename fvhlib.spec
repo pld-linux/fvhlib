@@ -1,7 +1,3 @@
-
-# conditional build:
-# _without_dist_kernel    without kernel from distribution
-
 Summary:	The fvhlib Library
 Summary(pl):	Biblioteka fvhlib
 Name:		fvhlib
@@ -13,7 +9,6 @@ Source0:	http://www.vanheusden.com/fvhlib/%{name}-%{version}.tgz
 Patch0:		%{name}-linking.patch
 URL:		http://www.vanheusden.com/fvhlib/
 BuildRequires:	openssl-devel
-%{!?_without_dist_kernel:BuildRequires: kernel-headers}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +38,7 @@ Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-The fvhlib-static package contains the static libraries of fvhlib.
+The fvhlib-static package contains the static version of fvhlib.
 
 %description static -l pl
 Biblioteka statyczna fvhlib.
@@ -53,7 +48,9 @@ Biblioteka statyczna fvhlib.
 %patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -fPIC -Wshadow -Wwrite-strings -Wconversion"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -63,7 +60,7 @@ install libfvh.so.2.4 $RPM_BUILD_ROOT%{_libdir}
 install libfvh.a $RPM_BUILD_ROOT%{_libdir}
 install *.h $RPM_BUILD_ROOT%{_includedir}/%{name}
 
-ln -s libfvh.so.2.4 $RPM_BUILD_ROOT%{_libdir}/libfvh.so
+ln -sf libfvh.so.2.4 $RPM_BUILD_ROOT%{_libdir}/libfvh.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
