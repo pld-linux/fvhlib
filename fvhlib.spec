@@ -22,7 +22,7 @@ Biblioteka fvhlib.
 Summary:	Development files for fvhlib library
 Summary(pl):	Pliki nag³ówkowe dla biblioteki fvhlib
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 The fvhlib-devel package contains the header files needed to develop
@@ -36,7 +36,7 @@ biblioteki fvhlib.
 Summary:	Static development library for fvhlib
 Summary(pl):	Biblioteka statyczna fvhlib
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 The fvhlib-static package contains the static version of fvhlib.
