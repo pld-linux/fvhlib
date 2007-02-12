@@ -1,5 +1,5 @@
 Summary:	The fvhlib Library
-Summary(pl):	Biblioteka fvhlib
+Summary(pl.UTF-8):   Biblioteka fvhlib
 Name:		fvhlib
 Version:	2.5
 Release:	1
@@ -15,12 +15,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The fvhlib Library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka fvhlib.
 
 %package devel
 Summary:	Development files for fvhlib library
-Summary(pl):	Pliki nag≥Ûwkowe dla biblioteki fvhlib
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla biblioteki fvhlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -28,20 +28,20 @@ Requires:	%{name} = %{version}-%{release}
 The fvhlib-devel package contains the header files needed to develop
 applications with fvhlib.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe potrzebne do rozwijania aplikacji korzystaj±cych z
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe potrzebne do rozwijania aplikacji korzystajƒÖcych z
 biblioteki fvhlib.
 
 %package static
 Summary:	Static development library for fvhlib
-Summary(pl):	Biblioteka statyczna fvhlib
+Summary(pl.UTF-8):   Biblioteka statyczna fvhlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 The fvhlib-static package contains the static version of fvhlib.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna fvhlib.
 
 %prep
