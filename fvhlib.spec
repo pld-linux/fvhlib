@@ -1,5 +1,5 @@
 Summary:	The fvhlib Library
-Summary(pl.UTF-8):   Biblioteka fvhlib
+Summary(pl.UTF-8):	Biblioteka fvhlib
 Name:		fvhlib
 Version:	2.5
 Release:	1
@@ -20,7 +20,7 @@ Biblioteka fvhlib.
 
 %package devel
 Summary:	Development files for fvhlib library
-Summary(pl.UTF-8):   Pliki nagłówkowe dla biblioteki fvhlib
+Summary(pl.UTF-8):	Pliki nagłówkowe dla biblioteki fvhlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -34,7 +34,7 @@ biblioteki fvhlib.
 
 %package static
 Summary:	Static development library for fvhlib
-Summary(pl.UTF-8):   Biblioteka statyczna fvhlib
+Summary(pl.UTF-8):	Biblioteka statyczna fvhlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
